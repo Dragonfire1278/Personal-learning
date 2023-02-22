@@ -1,0 +1,52 @@
+  <div class="wrapper">
+    <img class="Title" src="/Top.jpg"/>
+    <div class="Character">
+      <h2>Character</h2>
+      <label for="name">Name</label>
+      <input id="name" type="text" name="attr_character_name" />
+    </div>
+    <div>
+      <h2>Stats</h2>
+      <div>
+        <label for="base">Base</label>
+        <input type="number" name="attr_base" value="5" />
+        <button
+          type="roll"
+          value="&{template:roll}{{name=@{character_name}}}{{roll=[[2dattr_base]]}}"
+        ></button>
+      </div>
+      <div>
+        <label class="stats" for="attr_str">Strength</label>
+        <input class="stats" type="number" name="attr_str" value="5" />
+        <button
+          type="roll"
+          value="&{template:roll}{{name=@{character_name}}}{{roll=[[2d(@attr_base + @attr_str)]]}}"
+        ></button>
+      </div>
+      <div>
+        <label for="attr_agi">Agility</label>
+        <input class="stats" type="number" name="attr_agi" value="5" />
+      </div>
+      <div>
+        <label for="attr_end">Endurance</label>
+        <input class="stats" type="number" name="attr_end" value="5" />
+      </div>
+      <div>
+        <label for="attr_int">Intelligence</label>
+        <input class="stats" type="number" name="attr_int" value="5" />
+      </div>
+      <div>
+        <label for="attr_will">Willpower</label>
+        <input class="stats" type="number" name="attr_will" value="5" />
+      </div>
+      <div>
+        <label for="attr_dis">Discipline</label>
+        <input class="stats" type="number" name="attr_dis" value="5" />
+      </div>
+      <div>
+        <label for="attr_char">Charisma</label>
+        <input class="stats" type="number" name="attr_char" value="5" />
+      </div>
+    </div>
+  </div>
+</body>
